@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class ProductExceptionController extends RuntimeException {
     private static final long serialVersionUID=1L;
     
-    //fungsi memunculkan pesan exception
+    //method memunculkan pesan exception
     @ExceptionHandler(value=ProductNotfoundException.class)
     public ResponseEntity<Object>exception(ProductNotfoundException exception){
         return new ResponseEntity<>("Product not found",HttpStatus.NOT_FOUND);
